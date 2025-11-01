@@ -10,7 +10,7 @@ import mlflow.sklearn # type: ignore
 from sklearn.model_selection import train_test_split # type: ignore
 from sklearn.ensemble import RandomForestRegressor # type: ignore
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error # type: ignore
-from config import (
+from model_config import (
     feature_cols,
     target_col,
     experiment_name,

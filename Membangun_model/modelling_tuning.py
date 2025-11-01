@@ -13,7 +13,8 @@ from sklearn.ensemble import RandomForestRegressor # type: ignore
 from modelling_tuning_logger import manual_log_metrics
 from dotenv import load_dotenv
 load_dotenv()
-from config import (
+
+from model_config import (
     dagshub_repo_owner,
     dagshub_repo_name,
     dagshub_token,
