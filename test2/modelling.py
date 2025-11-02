@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-modelling.py - Basic Level
-Model Machine Learning dengan MLflow Autolog
-"""
-
-import pandas as pd  # type: ignore
-import mlflow  # type: ignore
-import mlflow.sklearn  # type: ignore
-from sklearn.model_selection import train_test_split  # type: ignore
-from sklearn.ensemble import RandomForestRegressor  # type: ignore
-from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error  # type: ignore
+import pandas as pd
+import mlflow
+import mlflow.sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 from model_config import (
     feature_cols,
     target_col,

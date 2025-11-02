@@ -8,8 +8,6 @@ from helper import check_model_availability
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """Lifespan context manager for startup and shutdown events"""
-    # STARTUP
     logger.info("🚀 Starting IEA Global EV Prediction API...")
     logger.info(f"📊 MLflow Model URL: {MLFLOW_MODEL_URL}")
     try:
@@ -22,5 +20,4 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.exception(f"Error while checking model availability on startup: {e}")
     yield  
-    # SHUTDOWN (opsional)
     logger.info("🛑 Shutting down IEA Global EV Prediction API...")

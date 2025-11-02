@@ -19,7 +19,6 @@ async def monitor_requests(request: Request, call_next):
         response = await call_next(request)
         duration = time.time() - start_time
 
-        # Record metrics
         REQUEST_LATENCY.labels(
             method=request.method, endpoint=request.url.path
         ).observe(duration)
